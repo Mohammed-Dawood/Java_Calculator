@@ -10,7 +10,7 @@ public class App {
         double number1, number2, result;
 
         while (true) {
-            System.out.println("Please choose an operator: +, -, *, or / (or 'q' to quit):");
+            System.out.println("Please choose an operator: +, -, *, or / (or 'q + Enter' to quit):");
             operator = input.next().charAt(0);
 
             if (operator == 'q') {
