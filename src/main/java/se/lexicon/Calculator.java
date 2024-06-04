@@ -22,6 +22,7 @@ public class Calculator {
             default:
                 throw new UnsupportedOperationException("Invalid operator: " + operator);
         }
+
         return result;
     }
 }
