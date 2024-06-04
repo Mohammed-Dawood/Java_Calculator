@@ -28,7 +28,7 @@ public class App {
                         System.out.println("Please enter the second number and press enter:");
                         number2 = input.nextDouble();
 
-                        result = performOperation(operator, number1, number2);
+                        result = Calculator.performOperation(operator, number1, number2);
 
                         System.out.println("Result = " + result);
                     } catch (InputMismatchException e) {
@@ -48,27 +48,5 @@ public class App {
         }
 
         input.close();
-    }
-
-    public static double performOperation(char operator, double number1, double number2) {
-        double result = 0;
-        switch (operator) {
-            case '+':
-                result = number1 + number2;
-                break;
-            case '-':
-                result = number1 - number2;
-                break;
-            case '*':
-                result = number1 * number2;
-                break;
-            case '/':
-                if (number2 == 0) {
-                    throw new ArithmeticException("Cannot divide by zero.");
-                }
-                result = number1 / number2;
-                break;
-        }
-        return result;
     }
 }
